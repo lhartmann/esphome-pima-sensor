@@ -28,7 +28,7 @@ DEVICE_CLASS_REACTIVE_ENERGY = "reactive_energy"
 DEPENDENCIES = ["uart"]
 
 pima_ns = cg.esphome_ns.namespace("pima")
-PIMA = pima_ns.class_("PIMA", uart.UARTDevice)
+PIMA = pima_ns.class_("PIMA", uart.UARTDevice, cg.Component)
 
 # PIMA has a ton of repetition. Handle a bit of it more efficiently
 def phase_measurement(prefix, sensor_schema):
