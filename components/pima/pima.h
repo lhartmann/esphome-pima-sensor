@@ -15,7 +15,7 @@ public:
     uint8_t scope, index;
     double scale;
     const char *label;
-    sensor::Sensor PIMA::* sensor;
+    sensor::Sensor* PIMA::* sensor;
   };
 
 protected:
