@@ -9,7 +9,7 @@
 namespace esphome {
 namespace pima {
 
-class PIMA : public uart::UARTDevice {
+class PIMA : public Component, public uart::UARTDevice {
 protected:
     PimaFrameDecoder frame;
 
