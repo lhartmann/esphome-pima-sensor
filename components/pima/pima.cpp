@@ -76,7 +76,7 @@ void PIMA::loop() {
     double value = frame.payload_bcd() * label.scale
     sensor->publish_state(value);
 
-    ESP_LOGV(TAG, "PIMA: %s = %f", label.label, value);
+//    ESP_LOGV(TAG, "PIMA: %s = %f", label.label, value);
   }
 }
 
