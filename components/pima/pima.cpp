@@ -14,7 +14,7 @@ struct PIMA_labels_t {
     sensor::Sensor PIMA::* sensor;
 };
 
-static const PIMA_labels_t PIMA_labels[] = {
+const PIMA_labels_t PIMA::PIMA_labels[] = {
     {0x0a, 0x02, 1.0, "kWh_t",        &PIMA::energy_consumed_total_ },
     {0x0a, 0x03, 1.0, "kWh_p",        &PIMA::energy_consumed_peak_rate_},
     {0x0a, 0x04, 1.0, "kWh_r",        &PIMA::energy_consumed_intermediate_rate_ },

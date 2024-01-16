@@ -11,7 +11,8 @@ namespace pima {
 
 class PIMA : public Component, public uart::UARTDevice {
 protected:
-    PimaFrameDecoder frame;
+  static const PIMA_labels_t PIMA_labels[];
+  PimaFrameDecoder frame;
 
 public:
   void setup() override;
