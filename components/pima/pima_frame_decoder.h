@@ -2,7 +2,7 @@
 #include <iostream>
 
 class PimaFrameDecoder {
-    constexpr unsigned bufflen{128};
+    static constexpr unsigned bufflen{128};
     uint8_t buffer[bufflen];
     uint8_t i, left;
     static constexpr uint8_t offset_length = 7;
