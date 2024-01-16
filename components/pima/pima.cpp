@@ -3,7 +3,7 @@
 #include <cinttypes>
 
 namespace esphome {
-namespace bl0942 {
+namespace pima {
 
 static const char *const TAG = "PIMA";
 
@@ -122,5 +122,5 @@ void PIMA::dump_config() {  // NOLINT(readability-function-cognitive-complexity)
   LOG_SENSOR("", "reactive_energy_inductive_generated_d_rate", this->reactive_energy_inductive_generated_d_rate_);
 */}
 
-}  // namespace bl0942
+}  // namespace pima
 }  // namespace esphome
