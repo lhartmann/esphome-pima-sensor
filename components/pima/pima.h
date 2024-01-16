@@ -10,6 +10,14 @@ namespace esphome {
 namespace pima {
 
 class PIMA : public Component, public uart::UARTDevice {
+public:
+  struct PIMA_labels_t {
+    uint8_t scope, index;
+    double scale;
+    const char *label;
+    sensor::Sensor PIMA::* sensor;
+  };
+
 protected:
   static const PIMA_labels_t PIMA_labels[];
   PimaFrameDecoder frame;

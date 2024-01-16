@@ -7,14 +7,7 @@ namespace pima {
 
 static const char *const TAG = "PIMA";
 
-struct PIMA_labels_t {
-    uint8_t scope, index;
-    double scale;
-    const char *label;
-    sensor::Sensor PIMA::* sensor;
-};
-
-const PIMA_labels_t PIMA::PIMA_labels[] = {
+const PIMA::PIMA_labels_t PIMA::PIMA_labels[] = {
     {0x0a, 0x02, 1.0, "kWh_t",        &PIMA::energy_consumed_total_ },
     {0x0a, 0x03, 1.0, "kWh_p",        &PIMA::energy_consumed_peak_rate_},
     {0x0a, 0x04, 1.0, "kWh_r",        &PIMA::energy_consumed_intermediate_rate_ },
