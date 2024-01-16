@@ -22,8 +22,8 @@ from esphome.const import (
 )
 
 # Not yet in esphome
-CONF_REACTIVE_ENERGY = "reactive_energy"
-DEVICE_CLASS_REACTIVE_ENERGY = "reactive_energy"
+CONF_REACTIVE_ENERGY = "energy"
+DEVICE_CLASS_REACTIVE_ENERGY = "energy"
 
 DEPENDENCIES = ["uart"]
 
