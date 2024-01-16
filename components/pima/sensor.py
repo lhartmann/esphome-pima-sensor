@@ -89,7 +89,7 @@ CONFIG_SCHEMA = (
     cv.Schema(
         {
             cv.GenerateID(): cv.declare_id(PIMA),
-            **{ cv.Optional(key) : value for (key:value) in procedural_schema_fragment.items() },
+            **{ cv.Optional(key) : value for (key,value) in procedural_schema_fragment.items() },
         }
     )
     .extend(uart.UART_DEVICE_SCHEMA)
