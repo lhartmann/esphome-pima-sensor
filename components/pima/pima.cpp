@@ -53,10 +53,12 @@ void PIMA::loop() {
       continue;
 
     // Frame is complete and valid. Check agains known scope:indexes...
-    sensor::Sensor *s{nullptr};
+    sensor::Sensor *sensor{nullptr};
+    double value = NAN;
     for (auto label : PIMA_labels) {
       if (label.scope == frame.scope() && label.index == frame.index()) {
-        sensor::Sensor *s = this->*label.sensor;
+        sensor = this->*label.sensor;
+        value = frame.payload_bcd() * label.scale;
         break;
       }
     }
@@ -66,7 +68,6 @@ void PIMA::loop() {
       continue;
 
     // All is well, publish.
-    double value = frame.payload_bcd() * label.scale
     sensor->publish_state(value);
 
 //    ESP_LOGV(TAG, "PIMA: %s = %f", label.label, value);
