@@ -1,4 +1,4 @@
-#include "bl0942.h"
+#include "pima.h"
 #include "esphome/core/log.h"
 #include <cinttypes>
 
